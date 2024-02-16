@@ -4,7 +4,7 @@
 //
 //  Created by Juhee Kang Johansson on 2024-02-14.
 //
-
+/*
 import SwiftUI
 import CoreData
 
@@ -72,6 +72,28 @@ struct ContentView: View {
             }
         }
     }
+    
+    /// Adds two numbers and returns the sum
+    /// - Parameters:
+    ///     - a: the first integer
+    ///     - b: the second integer
+    ///     - Returns:
+    ///     returns the sum of a and b as an integer
+    func addNumbers(a: Int, b: Int) -> Int {
+        return a + b
+    }
+    
+    func returnSquared(number : Int) -> Int {
+        return number * number
+    }
+    
+    func divideNumbers(a: Int, b: Int) -> Double {
+        let aDouble = Double(a)
+        let bDouble = Double(b)
+        
+        return Double(aDouble/bDouble)
+    }
+   
 }
 
 private let itemFormatter: DateFormatter = {
@@ -86,3 +108,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/

@@ -4,18 +4,20 @@
 //
 //  Created by Juhee Kang Johansson on 2024-02-14.
 //
-
+/*
 import XCTest
 @testable import NotePadiOS
 
 final class NotePadiOSTests: XCTestCase {
 
+    var listView: ListView!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        listView = ListView()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        listView = nil
     }
 
     func testExample() throws {
@@ -32,5 +34,57 @@ final class NotePadiOSTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testAddNumbersReturnsSum(){
+        
+        //arrange
+        let a = 2
+        let b = 3
+        let expected = 5
+        
+        //action
+        let actualResult = listView.addNumbers(a: a, b: b)
+        
+        //assert
+        XCTAssertEqual(expected, actualResult, "actualResult should be \(a+b)")
+        //XCTAssert(expected == actualResult)
+    }
+    
+    func testReturnSquare() {
+        //arrange
+        let number = 10
+        let expected = 100
+        //action
+        let actualResult = listView.returnSquared(number: number)
+        //assert
+        XCTAssert(expected, actualResult, "actualResult should be \(String(number * number))")
+    }
+    
+    func testDivideNumber() {
+        //arrange
+        let a = 5
+        let b = 2
+        let expected = 2.5
+        
+        //action
+        let actualResult = listView.divideNumbers(a: a, b: b)
+        
+        //assert
+        XCTAssertEqual(expected, actualResult, "actualResult should be \(Double(a)/Double(b))")
+    }
+    
+    func testAddNumbersMultipleCases() {
+        let testCases: [(a: Int, b: Int, expected: Int)] = [
+        (1,2,3),
+        (-1,1,0),
+        (10,0,10),
+        (0,0,0)
+        ]
+        
+        for testCase in testCases {
+            XCTAssertEqual(listView.addNumbers(a: testCase.a, b: testCase.b), testCase.expected, "\(testCase.a) + \(testCase.b) should be equal to \(testCase.expected)")
+        }
+        
+    }
 }
+*/

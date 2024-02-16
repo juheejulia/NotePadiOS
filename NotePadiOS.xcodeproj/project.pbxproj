@@ -16,6 +16,12 @@
 		D5903D592B7CAC3F00450DC2 /* NotePadiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D582B7CAC3F00450DC2 /* NotePadiOSTests.swift */; };
 		D5903D632B7CAC3F00450DC2 /* NotePadiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D622B7CAC3F00450DC2 /* NotePadiOSUITests.swift */; };
 		D5903D652B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */; };
+		D5903D732B7F653200450DC2 /* IndividuellUppgift.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */; };
+		D5903D7F2B7F6CEC00450DC2 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */; };
+		D5903D812B7F6D3D00450DC2 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D802B7F6D3D00450DC2 /* ListViewModel.swift */; };
+		D5903D832B7F6D5100450DC2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D822B7F6D5100450DC2 /* ListView.swift */; };
+		D5903D852B7F6D6300450DC2 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D842B7F6D6300450DC2 /* ListRowView.swift */; };
+		D5903D872B7F6D6F00450DC2 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D862B7F6D6F00450DC2 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		D5903D5E2B7CAC3F00450DC2 /* NotePadiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotePadiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5903D622B7CAC3F00450DC2 /* NotePadiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSUITests.swift; sourceTree = "<group>"; };
 		D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = IndividuellUppgift.rtf; sourceTree = "<group>"; };
+		D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		D5903D802B7F6D3D00450DC2 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D5903D822B7F6D5100450DC2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D5903D842B7F6D6300450DC2 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		D5903D862B7F6D6F00450DC2 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 		D5903D362B7CAC3700450DC2 = {
 			isa = PBXGroup;
 			children = (
+				D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */,
 				D5903D412B7CAC3700450DC2 /* NotePadiOS */,
 				D5903D572B7CAC3F00450DC2 /* NotePadiOSTests */,
 				D5903D612B7CAC3F00450DC2 /* NotePadiOSUITests */,
@@ -99,10 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				D5903D422B7CAC3700450DC2 /* NotePadiOSApp.swift */,
-				D5903D442B7CAC3700450DC2 /* ContentView.swift */,
+				D5903D7B2B7F6BF700450DC2 /* Models */,
+				D5903D7C2B7F6C0600450DC2 /* ViewModels */,
+				D5903D7D2B7F6C0F00450DC2 /* Views */,
 				D5903D462B7CAC3F00450DC2 /* Assets.xcassets */,
-				D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */,
-				D5903D4D2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld */,
 				D5903D482B7CAC3F00450DC2 /* Preview Content */,
 			);
 			path = NotePadiOS;
@@ -131,6 +144,35 @@
 				D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */,
 			);
 			path = NotePadiOSUITests;
+			sourceTree = "<group>";
+		};
+		D5903D7B2B7F6BF700450DC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */,
+				D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */,
+				D5903D4D2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5903D7C2B7F6C0600450DC2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5903D802B7F6D3D00450DC2 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5903D7D2B7F6C0F00450DC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5903D442B7CAC3700450DC2 /* ContentView.swift */,
+				D5903D822B7F6D5100450DC2 /* ListView.swift */,
+				D5903D842B7F6D6300450DC2 /* ListRowView.swift */,
+				D5903D862B7F6D6F00450DC2 /* AddView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +281,7 @@
 			files = (
 				D5903D4A2B7CAC3F00450DC2 /* Preview Assets.xcassets in Resources */,
 				D5903D472B7CAC3F00450DC2 /* Assets.xcassets in Resources */,
+				D5903D732B7F653200450DC2 /* IndividuellUppgift.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5903D7F2B7F6CEC00450DC2 /* ItemModel.swift in Sources */,
 				D5903D4C2B7CAC3F00450DC2 /* Persistence.swift in Sources */,
+				D5903D872B7F6D6F00450DC2 /* AddView.swift in Sources */,
+				D5903D812B7F6D3D00450DC2 /* ListViewModel.swift in Sources */,
+				D5903D852B7F6D6300450DC2 /* ListRowView.swift in Sources */,
+				D5903D832B7F6D5100450DC2 /* ListView.swift in Sources */,
 				D5903D4F2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld in Sources */,
 				D5903D452B7CAC3700450DC2 /* ContentView.swift in Sources */,
 				D5903D432B7CAC3700450DC2 /* NotePadiOSApp.swift in Sources */,
