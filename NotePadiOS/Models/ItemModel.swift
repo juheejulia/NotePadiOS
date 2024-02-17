@@ -1,18 +1,15 @@
 import Foundation
 
-struct ItemModel: Identifiable {
+struct ItemModel: Identifiable, Codable {
     let id: String
-    let title: String
-    let content: String
-    //let isCompleted: Bool
+    let context: String
     
-    init(id: String = UUID().uuidString, title: String, content: String) {
+    init(id: String = UUID().uuidString, context: String) {
         self.id = id
-        self.title = title
-        self.content = content
+        self.context = context
     }
     
     func updateCompletion() -> ItemModel {
-        return ItemModel(id: id, title: title, content: content)
+        return ItemModel(id: id, context: context)
     }
 }

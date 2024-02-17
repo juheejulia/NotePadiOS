@@ -20,6 +20,8 @@ struct NotePadiOSApp: App {
             NavigationView{
                 ListView()
             }
+            // It makes all different size of device include ipad navigationview as standard
+            .navigationViewStyle(StackNavigationViewStyle())
             .environmentObject(listViewModel)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

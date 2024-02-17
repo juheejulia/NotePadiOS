@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D5903D432B7CAC3700450DC2 /* NotePadiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D422B7CAC3700450DC2 /* NotePadiOSApp.swift */; };
-		D5903D452B7CAC3700450DC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D442B7CAC3700450DC2 /* ContentView.swift */; };
 		D5903D472B7CAC3F00450DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5903D462B7CAC3F00450DC2 /* Assets.xcassets */; };
 		D5903D4A2B7CAC3F00450DC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5903D492B7CAC3F00450DC2 /* Preview Assets.xcassets */; };
 		D5903D4C2B7CAC3F00450DC2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */; };
@@ -22,6 +21,7 @@
 		D5903D832B7F6D5100450DC2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D822B7F6D5100450DC2 /* ListView.swift */; };
 		D5903D852B7F6D6300450DC2 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D842B7F6D6300450DC2 /* ListRowView.swift */; };
 		D5903D872B7F6D6F00450DC2 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D862B7F6D6F00450DC2 /* AddView.swift */; };
+		D5903D8D2B80EBEA00450DC2 /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D8C2B80EBEA00450DC2 /* NoItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 /* Begin PBXFileReference section */
 		D5903D3F2B7CAC3700450DC2 /* NotePadiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotePadiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5903D422B7CAC3700450DC2 /* NotePadiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSApp.swift; sourceTree = "<group>"; };
-		D5903D442B7CAC3700450DC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D5903D462B7CAC3F00450DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5903D492B7CAC3F00450DC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		D5903D822B7F6D5100450DC2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D5903D842B7F6D6300450DC2 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		D5903D862B7F6D6F00450DC2 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		D5903D8C2B80EBEA00450DC2 /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +167,10 @@
 		D5903D7D2B7F6C0F00450DC2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D5903D442B7CAC3700450DC2 /* ContentView.swift */,
 				D5903D822B7F6D5100450DC2 /* ListView.swift */,
 				D5903D842B7F6D6300450DC2 /* ListRowView.swift */,
 				D5903D862B7F6D6F00450DC2 /* AddView.swift */,
+				D5903D8C2B80EBEA00450DC2 /* NoItemsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,8 +313,8 @@
 				D5903D852B7F6D6300450DC2 /* ListRowView.swift in Sources */,
 				D5903D832B7F6D5100450DC2 /* ListView.swift in Sources */,
 				D5903D4F2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld in Sources */,
-				D5903D452B7CAC3700450DC2 /* ContentView.swift in Sources */,
 				D5903D432B7CAC3700450DC2 /* NotePadiOSApp.swift in Sources */,
+				D5903D8D2B80EBEA00450DC2 /* NoItemsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,20 +6,21 @@ struct ListRowView: View {
     
     var body: some View {
         HStack {
-            Text(item.title)
-                .font(.title2)
-                .padding(.vertical, 8)
+            Text(item.context)
             Spacer()
-            Text(item.content)
-                .font(.title2)
-                .padding(.vertical, 8)
         }
-    }
+        .font(.title2)
+        .padding(.vertical, 8)
+            Spacer(minLength: 0)
+            Text(item.context)
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+        }
 }
 
 struct ListRowView_Previews: PreviewProvider {
     
-    static var item1 = ItemModel(title:"Firstitem", content: "This is my first item!")
+    static var item1 = ItemModel(context:"This is my first item.")
     
     static var previews: some View {
         Group {
