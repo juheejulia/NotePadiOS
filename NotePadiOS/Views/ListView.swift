@@ -3,30 +3,43 @@ import SwiftUI
 struct ListView: View {
     
     @EnvironmentObject var listViewModel: ListViewModel
+    @State var searchString: String = "Search"
     
 // View of NotePad List
     var body: some View {
-        ZStack {
-            if listViewModel.items.isEmpty {
-                NoItemsView()
-                    .transition(AnyTransition.opacity.animation(
-                        .easeIn))
-            } else {
-                List {
-                    ForEach(listViewModel.items) { item in
-                        ListRowView(item: item)
-                            .onTapGesture {
-                                withAnimation(.linear) {
-                                    listViewModel.updateItem(item: item)
-                                }
+        //VStack (spacing: 20) {
+            //TextField("Search", text: $searchString)
+            
+            ZStack {
+                if listViewModel.items.isEmpty {
+                    NoItemsView()
+                        .transition(AnyTransition.opacity.animation(
+                            .easeIn))
+                } else {
+                    List {
+                        Section {
+                            ForEach(listViewModel.items) { item in
+                                ListRowView(item: item)
+                                    .lineLimit(1)
+                                    .onTapGesture {
+                                        withAnimation(.linear) {
+                                            listViewModel.updateItem(item: item)
+                                        }
+                                    }
                             }
+                            .onDelete(perform: listViewModel.deleteItem)
+                            .onMove(perform: listViewModel.moveItem)
+                        } header: {
+                            Text("Today")
+                        } footer: {
+                            Text("It is opened today.")
+                        }
+                        
                     }
-                    .onDelete(perform: listViewModel.deleteItem)
-                    .onMove(perform: listViewModel.moveItem)
                 }
-                //.listStyle(PlainListStyle())
             }
-        }
+        //}
+        
         .navigationTitle("My Note")
         .navigationBarItems(
              leading: EditButton(),
