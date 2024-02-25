@@ -10,11 +10,6 @@
 		D5903D432B7CAC3700450DC2 /* NotePadiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D422B7CAC3700450DC2 /* NotePadiOSApp.swift */; };
 		D5903D472B7CAC3F00450DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5903D462B7CAC3F00450DC2 /* Assets.xcassets */; };
 		D5903D4A2B7CAC3F00450DC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5903D492B7CAC3F00450DC2 /* Preview Assets.xcassets */; };
-		D5903D4C2B7CAC3F00450DC2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */; };
-		D5903D4F2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5903D4D2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld */; };
-		D5903D592B7CAC3F00450DC2 /* NotePadiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D582B7CAC3F00450DC2 /* NotePadiOSTests.swift */; };
-		D5903D632B7CAC3F00450DC2 /* NotePadiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D622B7CAC3F00450DC2 /* NotePadiOSUITests.swift */; };
-		D5903D652B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */; };
 		D5903D732B7F653200450DC2 /* IndividuellUppgift.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */; };
 		D5903D7F2B7F6CEC00450DC2 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */; };
 		D5903D812B7F6D3D00450DC2 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5903D802B7F6D3D00450DC2 /* ListViewModel.swift */; };
@@ -46,13 +41,8 @@
 		D5903D422B7CAC3700450DC2 /* NotePadiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSApp.swift; sourceTree = "<group>"; };
 		D5903D462B7CAC3F00450DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5903D492B7CAC3F00450DC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D5903D4E2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotePadiOS.xcdatamodel; sourceTree = "<group>"; };
 		D5903D542B7CAC3F00450DC2 /* NotePadiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotePadiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5903D582B7CAC3F00450DC2 /* NotePadiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSTests.swift; sourceTree = "<group>"; };
 		D5903D5E2B7CAC3F00450DC2 /* NotePadiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotePadiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5903D622B7CAC3F00450DC2 /* NotePadiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSUITests.swift; sourceTree = "<group>"; };
-		D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePadiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = IndividuellUppgift.rtf; sourceTree = "<group>"; };
 		D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		D5903D802B7F6D3D00450DC2 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -92,8 +82,6 @@
 			children = (
 				D5903D722B7F653200450DC2 /* IndividuellUppgift.rtf */,
 				D5903D412B7CAC3700450DC2 /* NotePadiOS */,
-				D5903D572B7CAC3F00450DC2 /* NotePadiOSTests */,
-				D5903D612B7CAC3F00450DC2 /* NotePadiOSUITests */,
 				D5903D402B7CAC3700450DC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,29 +117,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D5903D572B7CAC3F00450DC2 /* NotePadiOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				D5903D582B7CAC3F00450DC2 /* NotePadiOSTests.swift */,
-			);
-			path = NotePadiOSTests;
-			sourceTree = "<group>";
-		};
-		D5903D612B7CAC3F00450DC2 /* NotePadiOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D5903D622B7CAC3F00450DC2 /* NotePadiOSUITests.swift */,
-				D5903D642B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift */,
-			);
-			path = NotePadiOSUITests;
-			sourceTree = "<group>";
-		};
 		D5903D7B2B7F6BF700450DC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D5903D7E2B7F6CEC00450DC2 /* ItemModel.swift */,
-				D5903D4B2B7CAC3F00450DC2 /* Persistence.swift */,
-				D5903D4D2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,12 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5903D7F2B7F6CEC00450DC2 /* ItemModel.swift in Sources */,
-				D5903D4C2B7CAC3F00450DC2 /* Persistence.swift in Sources */,
 				D5903D872B7F6D6F00450DC2 /* AddView.swift in Sources */,
 				D5903D812B7F6D3D00450DC2 /* ListViewModel.swift in Sources */,
 				D5903D852B7F6D6300450DC2 /* ListRowView.swift in Sources */,
 				D5903D832B7F6D5100450DC2 /* ListView.swift in Sources */,
-				D5903D4F2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld in Sources */,
 				D5903D432B7CAC3700450DC2 /* NotePadiOSApp.swift in Sources */,
 				D5903D8D2B80EBEA00450DC2 /* NoItemsView.swift in Sources */,
 			);
@@ -322,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5903D592B7CAC3F00450DC2 /* NotePadiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5903D652B7CAC3F00450DC2 /* NotePadiOSUITestsLaunchTests.swift in Sources */,
-				D5903D632B7CAC3F00450DC2 /* NotePadiOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +439,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NotePadiOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,6 +468,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NotePadiOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -633,19 +599,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D5903D4D2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D5903D4E2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodel */,
-			);
-			currentVersion = D5903D4E2B7CAC3F00450DC2 /* NotePadiOS.xcdatamodel */;
-			path = NotePadiOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D5903D372B7CAC3700450DC2 /* Project object */;
 }

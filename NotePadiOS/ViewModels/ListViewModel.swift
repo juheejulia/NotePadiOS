@@ -1,6 +1,7 @@
 import Foundation
 
 class ListViewModel: ObservableObject {
+
     @Published var items: [ItemModel] = [] {
         didSet {
             saveItems()
@@ -22,13 +23,17 @@ class ListViewModel: ObservableObject {
         
     }
     
+    func deleteItem(indexSet: IndexSet) {
+        items.remove(atOffsets: indexSet)
+    }
+    
+    func moveItem(from: IndexSet, to: Int) {
+        items.move(fromOffsets: from, toOffset: to)
+    }
+    
     func addItem(context: String) {
         let newItem = ItemModel(context: context)
         items.append(newItem)
-    }
-        
-    func deleteItem(indexSet: IndexSet) {
-        items.remove(atOffsets: indexSet)
     }
     
     func updateItem(item: ItemModel) {
@@ -37,20 +42,9 @@ class ListViewModel: ObservableObject {
         }
     }
     
-    func moveItem(from: IndexSet, to: Int) {
-        items.move(fromOffsets: from, toOffset: to)
-    }
-    
     func saveItems() {
         if let encodedData = try? JSONEncoder().encode(items) {
             UserDefaults.standard.set(encodedData, forKey: itemsKey)
         }
     }
-    
-    let itemFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .medium
-        return formatter
-    }()    
 }

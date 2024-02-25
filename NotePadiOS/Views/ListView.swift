@@ -1,15 +1,8 @@
 import SwiftUI
-import CoreData
 
 struct ListView: View {
     
     @EnvironmentObject var listViewModel: ListViewModel
-    @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    
-    private var items: FetchedResults<Item>
     
 // View of NotePad List
     var body: some View {
@@ -46,7 +39,7 @@ struct ListView: View {
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ListView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            ListView()
         }
         .environmentObject(ListViewModel())
     }
