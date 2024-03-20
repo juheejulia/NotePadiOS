@@ -16,4 +16,5 @@ struct ItemModel: Identifiable, Codable {
     func updateCompletion() -> ItemModel {
         return ItemModel(id: id, title: title, body: body)
     }
+     
 }

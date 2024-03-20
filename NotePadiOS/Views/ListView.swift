@@ -19,22 +19,20 @@ struct ListView: View {
                     List {
                         Section {
                             ForEach(listViewModel.items) { item in
-                                ListRowView(item: item)
-                                    .lineLimit(1)
-                                    .onTapGesture {
-                                        withAnimation(.linear) {
-                                            listViewModel.updateItem(item: item)
+                                NavigationLink(
+                                    destination: EditView(textEditorBody: item.body)) {
+                                    ListRowView(item: item)
+                                        .lineLimit(1)
+                                        .onTapGesture {
+                                            withAnimation(.linear) {
+                                                listViewModel.updateItem(item: item)
+                                            }
                                         }
-                                    }
+                                }
                             }
                             .onDelete(perform: listViewModel.deleteItem)
                             .onMove(perform: listViewModel.moveItem)
-                        } header: {
-                            Text("Today")
-                        } footer: {
-                            Text("It is opened today.")
                         }
-                        
                     }
                 }
             }
