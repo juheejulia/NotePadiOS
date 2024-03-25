@@ -3,7 +3,7 @@ import SwiftUI
 struct AddView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel: ListViewModel
-    @State var textEditorTitle: String = "New Title"
+    @State var textEditorTitle: String = ""
     @State var textEditorBody: String = ""
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
