@@ -10,19 +10,34 @@ struct AddView: View {
     
     var body: some View {
         ScrollView {
-            VStack (spacing: 30) {
+            VStack (spacing: 10) {
                 ZStack {
                     TextEditor(text: $textEditorTitle)
+                    // Hide the white defualt white background
+                        .scrollContentBackground(.hidden)
+                        .padding(.horizontal)
+                        .frame(height: 50)
+                        .font(.title)
+                        //.background(Color.gray.opacity(0.15))
+                        .cornerRadius(10)
+                    if textEditorTitle.isEmpty {
+                        Text("Write your title here.") //placeHolderText
+                            .position(x: 95, y: 20)
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+                
+                ZStack {
                     TextEditor(text: $textEditorBody)
                     // Hide the white defualt white background
                         .scrollContentBackground(.hidden)
                         .padding(.horizontal)
-                        .frame(height: 500)
-                        .background(Color.gray.opacity(0.15))
+                        .frame(height: 450)
+                        //.background(Color.gray.opacity(0.15))
                         .cornerRadius(10)
                     if textEditorBody.isEmpty {
                         Text("Write your text here.") //placeHolderText
-                            .position(x: 95, y: 20) //TODO: Need to find more sustainable code
+                            .position(x: 95, y: 20)
                             .foregroundStyle(.tertiary)
                     }
                 }
@@ -52,7 +67,7 @@ struct AddView: View {
     }
     // ctr + cmd + space shows imoji panel
     func textIsAppropriate() -> Bool {
-        if textEditorBody.count < 1 && textEditorTitle.count < 1 {
+        if textEditorBody.count < 1 || textEditorTitle.count < 1 {
             alertTitle = "Your new item must be at least 1 character long."
             showAlert.toggle()
             

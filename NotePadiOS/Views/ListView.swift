@@ -20,7 +20,9 @@ struct ListView: View {
                         Section {
                             ForEach(listViewModel.items) { item in
                                 NavigationLink(
-                                    destination: EditView(item: item, textEditorBody: item.body)) {
+                                    destination: EditView(item: item,
+                                                          textEditorTitle: item.title,
+                                                          textEditorBody: item.body)) {
                                     ListRowView(item: item)
                                         .lineLimit(1)
                                         .onTapGesture {

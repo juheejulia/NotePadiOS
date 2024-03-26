@@ -10,7 +10,7 @@ struct ListRowView: View {
                 .font(.title2)
             Text(item.body)
                 .font(.body)
-            Spacer()
+            //Spacer()
         }
         .padding(.vertical, 8)
     }
@@ -22,10 +22,10 @@ struct ListRowView_Previews: PreviewProvider {
     static var item2 = ItemModel(title: "Second Title", body:"Second item!")
     
     static var previews: some View {
-        Group {
-            ListRowView(item: item1)
-            ListRowView(item: item2)
-        }
-        .previewLayout(.sizeThatFits)
+            Group {
+                ListRowView(item: item1)
+                ListRowView(item: item2)
+            }
+            .previewLayout(.sizeThatFits)
     }
 }
