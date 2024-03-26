@@ -52,7 +52,7 @@ struct AddView: View {
     }
     // ctr + cmd + space shows imoji panel
     func textIsAppropriate() -> Bool {
-        if textEditorBody.count < 1 {
+        if textEditorBody.count < 1 && textEditorTitle.count < 1 {
             alertTitle = "Your new item must be at least 1 character long."
             showAlert.toggle()
             

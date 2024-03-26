@@ -17,7 +17,7 @@ struct NoItemsView: View {
                     destination: AddView(),
                     label: {
                         Text("Add")
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .font(.headline)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
