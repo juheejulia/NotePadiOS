@@ -18,7 +18,7 @@ struct AddView: View {
                         .padding(.horizontal)
                         .frame(height: 50)
                         .font(.title)
-                        //.background(Color.gray.opacity(0.15))
+                        .background(Color.gray.opacity(0.15))
                         .cornerRadius(10)
                     if textEditorTitle.isEmpty {
                         Text("Write your title here.") //placeHolderText
@@ -33,7 +33,7 @@ struct AddView: View {
                         .scrollContentBackground(.hidden)
                         .padding(.horizontal)
                         .frame(height: 450)
-                        //.background(Color.gray.opacity(0.15))
+                        .background(Color.gray.opacity(0.15))
                         .cornerRadius(10)
                     if textEditorBody.isEmpty {
                         Text("Write your text here.") //placeHolderText
@@ -44,7 +44,7 @@ struct AddView: View {
                 
                 Button(action: saveButtonPressed, label: {
                     Text("Save".uppercased())
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
@@ -54,7 +54,7 @@ struct AddView: View {
             }
             .padding(14)
         }
-        .navigationTitle("Add an item")
+        .navigationTitle("Add item")
         .alert(isPresented: $showAlert, content: getAlert)
     }
     
@@ -65,7 +65,7 @@ struct AddView: View {
             presentationMode.wrappedValue.dismiss()
         }
     }
-    // ctr + cmd + space shows imoji panel
+    
     func textIsAppropriate() -> Bool {
         if textEditorBody.count < 1 || textEditorTitle.count < 1 {
             alertTitle = "Your new item must be at least 1 character long."

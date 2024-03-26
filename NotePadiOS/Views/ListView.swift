@@ -3,12 +3,9 @@ import SwiftUI
 struct ListView: View {
     
     @EnvironmentObject var listViewModel: ListViewModel
-    @State var searchString: String = "Search"
     
 // View of NotePad List
     var body: some View {
-        //VStack (spacing: 20) {
-            //TextField("Search", text: $searchString)
             
             ZStack {
                 if listViewModel.items.isEmpty {
@@ -38,7 +35,6 @@ struct ListView: View {
                     }
                 }
             }
-        //}
         
         .navigationTitle("My Note")
         .navigationBarItems(

@@ -17,7 +17,7 @@ struct NoItemsView: View {
                     destination: AddView(),
                     label: {
                         Text("Add")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .font(.headline)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
@@ -54,7 +54,7 @@ struct NoItemsView_Previews: PreviewProvider {
         
         NavigationView {
             NoItemsView()
-                .navigationTitle("No Items")
+                .navigationTitle("My Note")
         }
     }
 }

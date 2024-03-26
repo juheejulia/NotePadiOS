@@ -22,7 +22,7 @@ struct EditView: View {
                         .padding(.horizontal)
                         .frame(height: 50)
                         .font(.title)
-                        //.background(Color.gray.opacity(0.15))
+                        .background(Color.gray.opacity(0.15))
                         .cornerRadius(10)
                     if textEditorTitle.isEmpty {
                         Text("Write your title here.") //placeHolderText
@@ -36,7 +36,7 @@ struct EditView: View {
                         .scrollContentBackground(.hidden)
                         .padding(.horizontal)
                         .frame(height: 450)
-                        //.background(Color.gray.opacity(0.15))
+                        .background(Color.gray.opacity(0.15))
                         .cornerRadius(10)
                     if textEditorBody.isEmpty {
                         Text("Write your text here.") //placeHolderText
@@ -47,7 +47,7 @@ struct EditView: View {
                 
                 Button(action: saveButtonPressed, label: {
                     Text("Save".uppercased())
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
@@ -56,7 +56,7 @@ struct EditView: View {
             }
             .padding(14)
         }
-        .navigationTitle("Update the item")
+        .navigationTitle("Edit item")
         .alert(isPresented: $showAlert, content: getAlert)
     }
     
