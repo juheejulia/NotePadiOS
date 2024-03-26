@@ -12,7 +12,7 @@ struct ListRowView: View {
                 .font(.body)
             Spacer()
         }
-        //.padding(.vertical, 8)
+        .padding(.vertical, 8)
     }
 }
 

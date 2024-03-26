@@ -12,6 +12,7 @@ struct AddView: View {
         ScrollView {
             VStack (spacing: 30) {
                 ZStack {
+                    TextEditor(text: $textEditorTitle)
                     TextEditor(text: $textEditorBody)
                     // Hide the white defualt white background
                         .scrollContentBackground(.hidden)
@@ -28,7 +29,7 @@ struct AddView: View {
                 
                 Button(action: saveButtonPressed, label: {
                     Text("Save".uppercased())
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
@@ -38,7 +39,7 @@ struct AddView: View {
             }
             .padding(14)
         }
-        .navigationTitle("Add an Item 🖌")
+        .navigationTitle("Add an item")
         .alert(isPresented: $showAlert, content: getAlert)
     }
     
@@ -52,7 +53,7 @@ struct AddView: View {
     // ctr + cmd + space shows imoji panel
     func textIsAppropriate() -> Bool {
         if textEditorBody.count < 1 {
-            alertTitle = "Your new item must be at least 1 character long.  \n😱🤯🥶"
+            alertTitle = "Your new item must be at least 1 character long."
             showAlert.toggle()
             
             return false

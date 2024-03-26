@@ -27,7 +27,7 @@ struct EditView: View {
                 
                 Button(action: saveButtonPressed, label: {
                     Text("Save".uppercased())
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
@@ -36,7 +36,7 @@ struct EditView: View {
             }
             .padding(14)
         }
-        .navigationTitle("Update Item")
+        .navigationTitle("Update the item")
         .alert(isPresented: $showAlert, content: getAlert)
     }
     
@@ -44,8 +44,8 @@ struct EditView: View {
     func saveButtonPressed() {
         if textIsAppropriate() {
             var updatedItem = item.updateCompletion()
-            updatedItem.body = textEditorBody
             updatedItem.title = textEditorTitle
+            updatedItem.body = textEditorBody
             listViewModel.updateItem(item: updatedItem)
             
             // Page turns to ListView when saveButtonPressed
@@ -54,7 +54,7 @@ struct EditView: View {
     }
     func textIsAppropriate() -> Bool {
         if textEditorBody.count < 1 {
-            alertTitle = "Your new item must be at least 1 character long.  \n😱🤯🥶"
+            alertTitle = "Your new item must be at least 1 character long"
             showAlert.toggle()
             
             return false
